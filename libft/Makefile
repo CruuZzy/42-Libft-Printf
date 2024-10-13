@@ -6,7 +6,7 @@
 #    By: scruz-ra <scruz-ra@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/07 17:23:48 by scruz-ra          #+#    #+#              #
-#    Updated: 2024/09/19 00:42:43 by scruz-ra         ###   ########.fr        #
+#    Updated: 2024/10/13 04:27:28 by scruz-ra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,17 +60,28 @@ OBJDIR		= $(OBJFILES) $(OBJFILES)ft_printf/
 
 	
 all: $(NAME)
+	@echo "$(GREEN)         _              _          _               _        _       "
+	@echo "        _\ \           /\ \       / /\            /\ \     /\ \     "
+	@echo "       /\__ \          \ \ \     / /  \          /  \ \    \_\ \    "
+	@echo "      / /_ \_\         /\ \_\   / / /\ \        / /\ \ \   /\__ \   "
+	@echo "     / / /\/_/        / /\/_/  / / /\ \ \      / / /\ \_\ / /_ \ \  "
+	@echo "    / / /            / / /    / / /\ \_\ \    / /_/_ \/_// / /\ \ \ "
+	@echo "   / / /            / / /    / / /\ \ \___\  / /____/\  / / /  \/_/ "
+	@echo "  / / / ____       / / /    / / /  \ \ \__/ / /\____\/ / / /        "
+	@echo " / /_/_/ ___/\ ___/ / /__  / / /____\_\ \  / / /      / / /         "
+	@echo "/_______/\__\//\__\/_/___\/ / /__________\/ / /      /_/ /          "
+	@echo "\_______\/    \/_________/\/_____________/\/_/       \_\/           $(RESET)"
+	@echo "" 
+	@echo "$(YELLOW)COMPILATION: $(GREEN)| OK!$(RESET)"
+	@echo "$(YELLOW)FILE:        $(GREEN)| $(NAME)$(RESET)"   
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@echo "$(YELLOW)COMPILATION  $(GREEN)| OK!$(RESET)"
-	@echo "$(YELLOW)FILE:        $(GREEN)| $(NAME)$(RESET)"
 
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
 $(OBJFILES)%.o: $(SRCDIR)%.c $(INCLUDES) | $(OBJDIR)
-	@echo "$(LIGHT_PURPLE)Compiling... | $<$(RESET)"
 	@$(CC) $(CFLAGS) -c -o $@ $<
 
 $(OBJFILES)ft_printf/%.o: $(PRINTF)%.c $(INCLUDES) | $(OBJDIR)
