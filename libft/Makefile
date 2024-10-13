@@ -6,7 +6,7 @@
 #    By: scruz-ra <scruz-ra@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/07 17:23:48 by scruz-ra          #+#    #+#              #
-#    Updated: 2024/10/13 04:27:28 by scruz-ra         ###   ########.fr        #
+#    Updated: 2024/10/13 04:43:45 by scruz-ra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,13 +19,11 @@ SRCDIR		= ./src/
 OBJFILES	= ./obj/
 PRINTF		= ./src/ft_printf/
 
-PURPLE		= \033[38;5;93m
-LIGHT_PURPLE = \033[38;5;99m
-LIGHT_PINK 	= \033[38;5;213m
+
 CYAN		= \033[38;5;45m
 PINK		= \033[38;5;207m
 RED			= \033[31m
-YELLOW		= \033[33m
+YELLOW		= \033[38;5;220m
 GREEN		= \033[32m
 RESET		= \033[0m
 
@@ -60,17 +58,17 @@ OBJDIR		= $(OBJFILES) $(OBJFILES)ft_printf/
 
 	
 all: $(NAME)
-	@echo "$(GREEN)         _              _          _               _        _       "
-	@echo "        _\ \           /\ \       / /\            /\ \     /\ \     "
-	@echo "       /\__ \          \ \ \     / /  \          /  \ \    \_\ \    "
-	@echo "      / /_ \_\         /\ \_\   / / /\ \        / /\ \ \   /\__ \   "
-	@echo "     / / /\/_/        / /\/_/  / / /\ \ \      / / /\ \_\ / /_ \ \  "
-	@echo "    / / /            / / /    / / /\ \_\ \    / /_/_ \/_// / /\ \ \ "
-	@echo "   / / /            / / /    / / /\ \ \___\  / /____/\  / / /  \/_/ "
-	@echo "  / / / ____       / / /    / / /  \ \ \__/ / /\____\/ / / /        "
-	@echo " / /_/_/ ___/\ ___/ / /__  / / /____\_\ \  / / /      / / /         "
-	@echo "/_______/\__\//\__\/_/___\/ / /__________\/ / /      /_/ /          "
-	@echo "\_______\/    \/_________/\/_____________/\/_/       \_\/           $(RESET)"
+	@echo "$(PINK)          _$(RESET)             $(CYAN)_           $(YELLOW)_                $(RED)_          $(GREEN)_       "
+	@echo "$(PINK)        _\ \ $(RESET)          $(CYAN)/\ \        $(YELLOW)/ /\             $(RED)/\ \      $(GREEN)/\ \     "
+	@echo "$(PINK)       /\__ \ $(RESET)         $(CYAN)\ \ \      $(YELLOW)/ /  \           $(RED)/  \ \     $(GREEN)\_\ \    "
+	@echo "$(PINK)      / /_ \_\ $(RESET)        $(CYAN)/\ \_\    $(YELLOW)/ / /\ \         $(RED)/ /\ \ \    $(GREEN)/\__ \   "
+	@echo "$(PINK)     / / /\/_/$(RESET)        $(CYAN)/ /\/_/   $(YELLOW)/ / /\ \ \       $(RED)/ / /\ \_\  $(GREEN)/ /_ \ \  "
+	@echo "$(PINK)    / / /$(RESET)            $(CYAN)/ / /     $(YELLOW)/ / /\ \_\ \     $(RED)/ /_/_ \/_/ $(GREEN)/ / /\ \ \ "
+	@echo "$(PINK)   / / /$(RESET)            $(CYAN)/ / /     $(YELLOW)/ / /\ \ \___\   $(RED)/ /____/\   $(GREEN)/ / /  \/_/ "
+	@echo "$(PINK)  / / / ____ $(RESET)      $(CYAN)/ / /     $(YELLOW)/ / /  \ \ \__/  $(RED)/ /\____\/  $(GREEN)/ / /        "
+	@echo "$(PINK) / /_/_/ ___/\ $(RESET)$(CYAN)___/ / /__   $(YELLOW)/ / /____\_\ \   $(RED)/ / /       $(GREEN)/ / /         "
+	@echo "$(PINK)/_______/\__\/$(RESET)$(CYAN)/\__\/_/___\ $(YELLOW)/ / /__________\ $(RED)/ / /       $(GREEN)/_/ /          "
+	@echo "$(PINK)\_______\/$(RESET)    $(CYAN)\/_________/ $(YELLOW)\/_____________/ $(RED)\/_/        $(GREEN)\_\/           $(RESET)"
 	@echo "" 
 	@echo "$(YELLOW)COMPILATION: $(GREEN)| OK!$(RESET)"
 	@echo "$(YELLOW)FILE:        $(GREEN)| $(NAME)$(RESET)"   
