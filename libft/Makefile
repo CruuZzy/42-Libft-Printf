@@ -58,7 +58,7 @@ OBJDIR		= $(OBJFILES) $(OBJFILES)ft_printf/
 
 	
 all: $(NAME)
-	@echo "$(PINK)          _$(RESET)             $(CYAN)_           $(YELLOW)_                $(RED)_          $(GREEN)_       "
+	@echo "$(PINK)          _$(RESET)             $(CYAN) _           $(YELLOW)_                $(RED)_         $(GREEN)_       "
 	@echo "$(PINK)        _\ \ $(RESET)          $(CYAN)/\ \        $(YELLOW)/ /\             $(RED)/\ \      $(GREEN)/\ \     "
 	@echo "$(PINK)       /\__ \ $(RESET)         $(CYAN)\ \ \      $(YELLOW)/ /  \           $(RED)/  \ \     $(GREEN)\_\ \    "
 	@echo "$(PINK)      / /_ \_\ $(RESET)        $(CYAN)/\ \_\    $(YELLOW)/ / /\ \         $(RED)/ /\ \ \    $(GREEN)/\__ \   "
